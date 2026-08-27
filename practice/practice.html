@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Student dashboard for managing courses and progress">
+
+    <title>Student Dashboard</title>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <h1>Student Dashboard</h1>
+
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#progress">Progress</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main>
+
+        <!-- Hero / Introduction -->
+        <section id="home">
+            <h2>Welcome, Student!</h2>
+
+            <p>
+                Track your courses, assignments and learning progress
+                from one place.
+            </p>
+
+            <figure>
+                <img
+                    src="student.png"
+                    alt="Student studying at a desk"
+                    width="400"
+                >
+
+                <figcaption>
+                    Keep learning and improving every day.
+                </figcaption>
+            </figure>
+        </section>
+
+
+        <!-- ================= COURSES ================= -->
+        <section id="courses">
+
+            <h2>My Courses</h2>
+
+            <article>
+                <h3>Web Development</h3>
+
+                <p>
+                    Learn <strong>HTML</strong>, CSS and JavaScript
+                    to build modern websites.
+                </p>
+
+                <progress value="70" max="100">70%</progress>
+
+                <p>Progress: 70%</p>
+            </article>
+
+
+            <article>
+                <h3>Python Programming</h3>
+
+                <p>
+                    Learn Python programming, functions,
+                    OOP and problem solving.
+                </p>
+
+                <progress value="85" max="100">85%</progress>
+
+                <p>Progress: 85%</p>
+            </article>
+
+        </section>
+
+
+        <!-- ================= TABLE ================= -->
+        <section id="progress">
+
+            <h2>Assignment Progress</h2>
+
+            <table border="1">
+
+                <caption>
+                    Weekly Assignment Status
+                </caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Assignment</th>
+                        <th scope="col">Subject</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Deadline</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Portfolio Website</td>
+                        <td>Web Development</td>
+                        <td>Completed</td>
+                        <td>
+                            <time datetime="2026-08-30">
+                                August 30
+                            </time>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Python OOP</td>
+                        <td>Python</td>
+                        <td>In Progress</td>
+                        <td>
+                            <time datetime="2026-09-02">
+                                September 2
+                            </time>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Database Project</td>
+                        <td>DBMS</td>
+                        <td>Pending</td>
+                        <td>
+                            <time datetime="2026-09-05">
+                                September 5
+                            </time>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <!-- ================= FORM ================= -->
+        <section id="contact">
+
+            <h2>Contact / Feedback</h2>
+
+            <form action="/submit" method="post">
+
+                <fieldset>
+
+                    <legend>Student Information</legend>
+
+                    <div>
+                        <label for="name">Full Name:</label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            required
+                        >
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for="email">Email:</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="example@gmail.com"
+                            required
+                        >
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for="course">Course:</label>
+
+                        <select id="course" name="course">
+
+                            <option value="">
+                                Select a course
+                            </option>
+
+                            <option value="web">
+                                Web Development
+                            </option>
+
+                            <option value="python">
+                                Python
+                            </option>
+
+                            <option value="dbms">
+                                DBMS
+                            </option>
+
+                        </select>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <p>Learning Level:</p>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="level"
+                                value="beginner"
+                            >
+                            Beginner
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="level"
+                                value="intermediate"
+                            >
+                            Intermediate
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="level"
+                                value="advanced"
+                            >
+                            Advanced
+                        </label>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for="message">
+                            Your Feedback:
+                        </label>
+
+                        <br>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            cols="40"
+                            placeholder="Write your feedback..."
+                        ></textarea>
+                    </div>
+
+                    <br>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="updates"
+                        >
+                        Receive course updates
+                    </label>
+
+                    <br><br>
+
+                    <button type="submit">
+                        Submit Feedback
+                    </button>
+
+                    <button type="reset">
+                        Clear
+                    </button>
+
+                </fieldset>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside>
+
+        <h2>Quick Resources</h2>
+
+        <ul>
+            <li><a href="#">HTML Notes</a></li>
+            <li><a href="#">CSS Notes</a></li>
+            <li><a href="#">JavaScript Notes</a></li>
+            <li><a href="#">Practice Problems</a></li>
+        </ul>
+
+    </aside>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+
+        <p>
+            &copy; 2026 Student Dashboard
+        </p>
+
+        <address>
+            Contact:
+            <a href="mailto:student@example.com">
+                student@example.com
+            </a>
+        </address>
+
+    </footer>
+
+</body>
+</html>
